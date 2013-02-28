@@ -1,0 +1,3 @@
+window.Tarsus =
+  Views:
+    Bootstrap: {}
