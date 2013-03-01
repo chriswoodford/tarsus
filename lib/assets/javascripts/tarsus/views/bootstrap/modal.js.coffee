@@ -1,5 +1,10 @@
 class Tarsus.Views.Bootstrap.Modal extends Backbone.View
 
+  tagName: 'div'
+  className: 'modal hide fade'
+  attributes:
+    tabindex: -1
+
   events:
     'shown': 'shown'
     'hidden': 'hidden'
@@ -13,28 +18,42 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
   initialize: (options)->
     _.bindAll @
     @options = _.extend @defaults, options
-    # check for template
 
   render: ->
-    @$el.html @template()
+    body = Backbone.$('<div class="modal-body"></div>')
+    body.html @template()
+
+    @$el.append @header()
+    @$el.append body
+    @$el.append @footer()
+
     @$el.modal(@options)
     @delegateEvents()
     @
 
   show: ->
     @$el.modal('show')
-    console.log 'show'
 
   shown: ->
-    console.log 'shown'
+    # to be overloaded by child classes
 
   hide: ->
     @$el.modal('hide')
-    console.log 'hide'
 
   hidden: ->
-    console.log 'hidden'
+    # to be overloaded by child classes
 
   toggle: ->
     @$el.modal('toggle')
-    console.log 'toggle'
+
+  header: ->
+    header = Backbone.$('<div class="modal-header"></div>')
+    header.append @closeButton()
+    header.append('<h3>' + @options.title + '</h3>') if @options.title?
+    header
+
+  closeButton: ->
+    Backbone.$('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>')
+
+  footer: ->
+    # to be overloaded by child classes
