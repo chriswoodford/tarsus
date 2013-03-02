@@ -4,35 +4,44 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
   className: 'modal hide fade'
   attributes:
     tabindex: -1
+    style: 'outline: 0;'
 
   events:
     'shown': 'shown'
     'hidden': 'hidden'
 
   defaults:
-    backdrop: true
-    keyboard: true
-    show: false
-    remote: false
+    bootstrap:
+      backdrop: true
+      keyboard: true
+      show: false
+      remote: false
+    noCloseButton: false
 
   initialize: (options)->
     _.bindAll @
     @options = _.extend @defaults, options
 
   render: ->
+    header = @header()
+    footer = @footer()
     body = Backbone.$('<div class="modal-body"></div>')
-    body.html @template()
+    body.append @template()
 
-    @$el.append @header()
+    if header?
+      headerContainer = Backbone.$('<div class=\"modal-header\"></div>')
+      headerContainer.append @closeButton() unless @options.noCloseButton
+      headerContainer.append header
+      @$el.append headerContainer
+
     @$el.append body
 
-    footer = @footer()
-
     if footer?
-      footer.wrap('<div class="modal-footer"></div>')
-      @$el.append @footer()
+      footerContainer = Backbone.$('<div class="modal-footer"></div>')
+      footerContainer.append footer
+      @$el.append footerContainer
 
-    @$el.modal(@options)
+    @$el.modal(@options.bootstrap)
     @delegateEvents()
     @
 
@@ -52,10 +61,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     @$el.modal('toggle')
 
   header: ->
-    header = Backbone.$('<div class="modal-header"></div>')
-    header.append @closeButton()
-    header.append('<h3>' + @options.title + '</h3>') if @options.title?
-    header
+    Backbone.$('<h3>' + @options.title + '</h3>') if @options.title?
 
   closeButton: ->
     Backbone.$('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>')
