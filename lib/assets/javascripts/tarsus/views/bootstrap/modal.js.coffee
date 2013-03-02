@@ -42,7 +42,6 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
       @$el.append footerContainer
 
     @$el.modal(@options.bootstrap)
-    @delegateEvents()
     @
 
   show: ->
