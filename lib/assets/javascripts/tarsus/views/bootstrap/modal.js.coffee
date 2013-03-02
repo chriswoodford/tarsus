@@ -23,10 +23,12 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     @options = _.extend @defaults, options
 
   render: ->
+    model = @model.attributes if @model?
+
     header = @header()
     footer = @footer()
     body = Backbone.$('<div class="modal-body"></div>')
-    body.append @template()
+    body.append @template(model)
 
     if header?
       headerContainer = Backbone.$('<div class="modal-header"></div>')
