@@ -29,7 +29,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     body.append @template()
 
     if header?
-      headerContainer = Backbone.$('<div class=\"modal-header\"></div>')
+      headerContainer = Backbone.$('<div class="modal-header"></div>')
       headerContainer.append @closeButton() unless @options.noCloseButton
       headerContainer.append header
       @$el.append headerContainer
