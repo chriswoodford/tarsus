@@ -23,7 +23,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     @options = _.extend @defaults, options
 
   render: ->
-    model = @model.attributes if @model?
+    model = @model.attributes if @model is Backbone.Model
 
     header = @header()
     footer = @footer()
@@ -31,7 +31,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     body.append @template(model)
 
     if header?
-      headerContainer = Backbone.$('<div class="modal-header"></div>')
+      headerContainer = @headerContainer()
       headerContainer.append @closeButton() unless @options.noCloseButton
       headerContainer.append header
       @$el.append headerContainer
@@ -39,7 +39,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     @$el.append body
 
     if footer?
-      footerContainer = Backbone.$('<div class="modal-footer"></div>')
+      footerContainer = @footerContainer()
       footerContainer.append footer
       @$el.append footerContainer
 
@@ -61,11 +61,17 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
   toggle: ->
     @$el.modal('toggle')
 
+  headerContainer: ->
+    Backbone.$('<div class="modal-header"></div>')
+
   header: ->
     Backbone.$('<h3>' + @options.title + '</h3>') if @options.title?
 
   closeButton: ->
     Backbone.$('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>')
+
+  footerContainer: ->
+    Backbone.$('<div class="modal-footer"></div>')
 
   footer: ->
     # to be overloaded by child classes
