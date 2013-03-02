@@ -25,7 +25,12 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
 
     @$el.append @header()
     @$el.append body
-    @$el.append @footer()
+
+    footer = @footer()
+
+    if footer?
+      footer.wrap('<div class="modal-footer"></div>')
+      @$el.append @footer()
 
     @$el.modal(@options)
     @delegateEvents()
