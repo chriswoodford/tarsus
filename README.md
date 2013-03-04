@@ -15,8 +15,7 @@ Wrap [Twitter Bootstrap](http://twitter.github.com/bootstrap) elements in
 
 ## Views
 
-* [Modal](http://twitter.github.com/bootstrap/javascript.html#modals)
-
+* [Modal](docs/modal.md)
 
 ## Examples
 
@@ -43,3 +42,4 @@ Instantiate the Modal with options
           show: false
       )
       login.render()
+
