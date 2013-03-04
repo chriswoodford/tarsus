@@ -1,0 +1,8 @@
+{
+  "name": "tarsus.js",
+  "license": "MIT",
+  "version": "0.0.1-alpha",
+  "devDependencies": {
+    "jasmine-node": "~1.3.0"
+  }
+}
