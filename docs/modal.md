@@ -49,12 +49,12 @@ Calls Bootstrap's .modal('toggle')
 
 #### header()
 
-Builds the markup that will display in the header. Uses Bootstrap's <h3>Title</h3> convention by default
+Builds the markup that will display in the header. Uses Bootstrap's `<h3>Title</h3>` convention by default
 Override this method to change the returned markup
 
 #### headerContainer()
 
-Builds the markup that will surround the header. Uses Bootstrap's <div class="modal-header"> convention by default.
+Builds the markup that will surround the header. Uses Bootstrap's `<div class="modal-header">` convention by default.
 Override this method to change the returned markup.
 
 #### closeButton()
@@ -69,5 +69,5 @@ Override this method to build markup to be rendered in the footer
 
 #### footerContainer()
 
-Build the markup that will surround the footer. Uses Bootstrap's <div class="modal-footer"> convention by default.
+Build the markup that will surround the footer. Uses Bootstrap's `<div class="modal-footer">` convention by default.
 Override this method to change the returned markup. The markup will only be rendered if the footer() method returns a value.
