@@ -16,6 +16,7 @@ Wrap [Twitter Bootstrap](http://twitter.github.com/bootstrap) elements in
 ## Views
 
 * [Modal](docs/modal.md)
+* [Alert](docs/alert.md)
 
 ## Examples
 
@@ -35,7 +36,7 @@ Create a modal that transfers the user to /login after 1 second
 Instantiate the Modal with options
 
     $(document).ready ->
-      login = new Top2Application.Views.Login(
+      login = new YourApplication.Views.Login(
         title: 'Login'
         noCloseButton: true
         bootstrap:
@@ -43,3 +44,12 @@ Instantiate the Modal with options
       )
       login.render()
 
+### Bootstrap Alert
+
+Render an info alert to an element
+
+    $(document).ready ->
+      alert = new Tarsus.Views.Bootstrap.Alert
+        text: 'Hello World!'
+        status: 'info'
+      $('#app').append alert.render()
