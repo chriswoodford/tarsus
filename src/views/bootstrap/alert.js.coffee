@@ -28,21 +28,27 @@ class Tarsus.Views.Bootstrap.Alert extends Backbone.View
       @$el.append @options.text
 
     @$el.alert()
+    @
 
   close: ->
     @trigger 'tarsus:alert:close'
+    @
 
   closed: ->
     @trigger 'tarsus:alert:closed'
+    @
 
   success: ->
     @options.status = 'success'
+    @
 
   info: ->
     @options.status = 'info'
+    @
 
   error: ->
     @options.status = 'error'
+    @
 
   closeButton: ->
     Backbone.$('<button type="button" class="close" data-dismiss="alert">&times;</button>')
