@@ -24,21 +24,21 @@ class Tarsus.Views.Bootstrap.Tooltip extends Backbone.View
     @
 
   show: ->
-    @$el.tooltop('show')
+    @$el.tooltip('show')
     @trigger 'tarsus:tooltip:show'
     @
 
   hide: ->
-    @$el.tooltop('hide')
+    @$el.tooltip('hide')
     @trigger 'tarsus:tooltip:hide'
     @
 
   toggle: ->
-    @$el.tooltop('toggle')
+    @$el.tooltip('toggle')
     @trigger 'tarsus:tooltip:toggle'
     @
 
   destroy: ->
-    @$el.tooltop('destroy')
+    @$el.tooltip('destroy')
     @trigger 'tarsus:tooltip:destroy'
     @
