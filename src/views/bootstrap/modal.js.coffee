@@ -48,18 +48,24 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
 
   show: ->
     @$el.modal('show')
+    @trigger 'tarsus:modal:show'
+    @
 
   shown: ->
     # to be overloaded by child classes
 
   hide: ->
     @$el.modal('hide')
+    @trigger 'tarsus:modal:hide'
+    @
 
   hidden: ->
     # to be overloaded by child classes
 
   toggle: ->
     @$el.modal('toggle')
+    @trigger 'tarsus:modal:toggle'
+    @
 
   headerContainer: ->
     Backbone.$('<div class="modal-header"></div>')
