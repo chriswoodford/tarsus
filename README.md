@@ -42,12 +42,11 @@ Create a modal that transfers the user to /login after 1 second
 Instantiate the Modal with options
 
     $(document).ready ->
-      login = new YourApplication.Views.Login(
+      login = new YourApplication.Views.Login
         title: 'Login'
         noCloseButton: true
         bootstrap:
           show: false
-      )
       login.render()
 
 ### Bootstrap Alert
