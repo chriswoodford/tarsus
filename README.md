@@ -15,8 +15,14 @@ Wrap [Twitter Bootstrap](http://twitter.github.com/bootstrap) elements in
 
 ## Views
 
-* [Modal](docs/modal.md)
+* [Accordion](docs/accordion.md)
 * [Alert](docs/alert.md)
+* [Carousel](docs/carousel.md)
+* [Dropdown](docs/dropdown.md)
+* [Modal](docs/modal.md)
+* [Popover](docs/popover.md)
+* [Tabs](docs/tabs.md)
+* [Tooltip](docs/tooltip.md)
 
 ## Examples
 
