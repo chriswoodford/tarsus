@@ -13,6 +13,7 @@ class Tarsus.Views.Bootstrap.Tooltip extends Backbone.View
       trigger: 'hover focus'
       delay: 0
       container: false
+    text: null
 
   initialize: (options)->
     _.bindAll @
