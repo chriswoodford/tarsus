@@ -53,3 +53,14 @@ Render an info alert to an element
         text: 'Hello World!'
         status: 'info'
       $('#app').append alert.render()
+
+### Bootstrap Tooltip
+
+    $(document).ready ->
+      tooltip = new Tarsus.Views.Bootstrap.Tooltip
+        text: 'This is a test!'
+        bootstrap:
+          title: 'Here is my tip'
+          placement: 'right'
+      $('#app').append tooltip.render().el
+
