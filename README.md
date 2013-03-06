@@ -52,7 +52,7 @@ Render an info alert to an element
       alert = new Tarsus.Views.Bootstrap.Alert
         text: 'Hello World!'
         status: 'info'
-      $('#app').append alert.render()
+      $('#app').append alert.render().el
 
 ### Bootstrap Tooltip
 
