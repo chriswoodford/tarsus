@@ -1,0 +1,1 @@
+class Tarsus.Views.Bootstrap.Tabs extends Backbone.View

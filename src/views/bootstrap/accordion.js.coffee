@@ -1,0 +1,1 @@
+class Tarsus.Views.Bootstrap.Accordion extends Backbone.View

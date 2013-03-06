@@ -1,0 +1,1 @@
+class Tarsus.Views.Bootstrap.Tooltip extends Backbone.View
