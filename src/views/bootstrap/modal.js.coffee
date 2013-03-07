@@ -43,11 +43,11 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
       footerContainer.append footer
       @$el.append footerContainer
 
-    @$el.modal(@options.bootstrap)
+    @$el.modal @options.bootstrap
     @
 
   show: ->
-    @$el.modal('show')
+    @$el.modal 'show'
     @trigger 'tarsus:modal:show'
     @
 
@@ -55,7 +55,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     # to be overloaded by child classes
 
   hide: ->
-    @$el.modal('hide')
+    @$el.modal 'hide'
     @trigger 'tarsus:modal:hide'
     @
 
@@ -63,7 +63,7 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
     # to be overloaded by child classes
 
   toggle: ->
-    @$el.modal('toggle')
+    @$el.modal 'toggle'
     @trigger 'tarsus:modal:toggle'
     @
 

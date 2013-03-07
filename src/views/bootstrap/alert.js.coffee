@@ -22,7 +22,7 @@ class Tarsus.Views.Bootstrap.Alert extends Backbone.View
     @$el.append @header() if @options.title?
 
     if template?
-      @$el.addClass('alert-block')
+      @$el.addClass 'alert-block'
       @$el.append @template()
     else
       @$el.append @options.text
