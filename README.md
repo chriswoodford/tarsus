@@ -69,3 +69,12 @@ Render an info alert to an element
           placement: 'right'
       $('#app').append tooltip.render().el
 
+### Bootstrap Popover
+
+    $(document).ready ->
+      popover = new Tarsus.Views.Bootstrap.Popover
+        text: 'Trigger my Popover'
+        bootstrap:
+          title: 'My first popover'
+          content: 'lorem ipsum dolar sit amet.'
+      $('#app').append popover.render().el
