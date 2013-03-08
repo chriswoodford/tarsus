@@ -1,19 +1,19 @@
 {
   "name": "tarsus.js",
-  "description": "",
+  "description": "Wrap your Twitter Bootstrap elements in Backbone Views",
   "url": "https://github.com/chriswoodford/tarsus",
   "keywords": ["backbone", "bootstrap"],
-  "author": "Chris Woodford <chris.woodford@gmail.com>"
+  "author": "Chris Woodford <chris.woodford@gmail.com>",
   "license": "MIT",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "dependencies": {
     "backbone": ">=0.9.10",
-    "bootstrap": ">=2.3.0"
+    "twitter-bootstrap": ">=2.1.1"
   },
   "devDependencies": {
-    "jasmine": "1.3.1"
+    "jasmine-node": "1.3.0"
   },
   "scripts": {
-    "test": "open tests/SpecRunner.html"
+    "test": "jasmine-node spec/"
   }
 }
