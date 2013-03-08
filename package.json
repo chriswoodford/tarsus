@@ -1,8 +1,19 @@
 {
   "name": "tarsus.js",
+  "description": "",
+  "url": "https://github.com/chriswoodford/tarsus",
+  "keywords": ["backbone", "bootstrap"],
+  "author": "Chris Woodford <chris.woodford@gmail.com>"
   "license": "MIT",
   "version": "0.0.1-alpha",
+  "dependencies": {
+    "backbone": ">=0.9.10",
+    "bootstrap": ">=2.3.0"
+  },
   "devDependencies": {
-    "jasmine-node": "~1.3.0"
+    "phantomjs": "1.8.1-3"
+  },
+  "scripts": {
+    "test": "phantomjs"
   }
 }
