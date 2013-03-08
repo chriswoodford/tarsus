@@ -81,3 +81,4 @@ class Tarsus.Views.Bootstrap.Modal extends Backbone.View
 
   footer: ->
     # to be overloaded by child classes
+
