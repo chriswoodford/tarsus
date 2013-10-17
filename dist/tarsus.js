@@ -9,6 +9,7 @@
     if (typeof exports !== "undefined" && exports !== null) {
       Tarsus = exports;
     }
+    Tarsus.VERSION = "0.0.1";
     Tarsus.Views = {};
     Tarsus.Views.Bootstrap = {};
     return Tarsus;
