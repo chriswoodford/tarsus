@@ -1,1 +1,1 @@
-class Tarsus.Views.Bootstrap.Accordion extends Tarsu.View
+class Tarsus.Views.Bootstrap.Accordion extends Tarsus.View
