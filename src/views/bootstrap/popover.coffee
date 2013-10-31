@@ -17,10 +17,6 @@ class Tarsus.Views.Bootstrap.Popover extends Tarsus.View
       content: null
     text: null
 
-  initialize: (options)->
-    _.bindAll @
-    @options = _.extend @defaults, options
-
   render: ->
     @$el.text @options.text
     @$el.popover @options.bootstrap

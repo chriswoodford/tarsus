@@ -10,10 +10,6 @@ class Tarsus.Views.Bootstrap.Alert extends Tarsus.View
     'close': 'close'
     'closed': 'closed'
 
-  initialize: (options)->
-    _.bindAll @
-    @options = _.extend @defaults, options
-
   render: ->
     @$el.addClass('fade in') if @options.fadeIn
     @$el.addClass('alert-' + @options.status) if @options.status?

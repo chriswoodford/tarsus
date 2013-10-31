@@ -15,10 +15,6 @@ class Tarsus.Views.Bootstrap.Tooltip extends Tarsus.View
       container: false
     text: null
 
-  initialize: (options)->
-    _.bindAll @
-    @options = _.extend @defaults, options
-
   render: ->
     @$el.text @options.text
     @$el.tooltip @options.bootstrap

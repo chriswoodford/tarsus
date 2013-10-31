@@ -18,10 +18,6 @@ class Tarsus.Views.Bootstrap.Modal extends Tarsus.View
       remote: false
     noCloseButton: false
 
-  initialize: (options)->
-    _.bindAll @
-    @options = _.extend @defaults, options
-
   render: ->
     model = @model.attributes if @model is Backbone.Model
 
