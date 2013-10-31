@@ -1,13 +1,10 @@
-Tarsus = (Backbone)->
-  "use strict"
+"use strict"
 
-  Tarsus = {}
-  Tarsus = exports if exports?
+root = exports ? this
 
-  Tarsus.VERSION = "0.0.1"
-  Tarsus.Views = {}
-  Tarsus.Views.Bootstrap = {}
+Tarsus = root.Tarsus =
+  VERSION: "0.0.1"
+  Views:
+    Bootstrap: {}
 
-  return Tarsus
-
-Tarsus(Backbone)
+_.extend(Tarsus, Backbone.Events)
