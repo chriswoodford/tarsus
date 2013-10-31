@@ -1,4 +1,4 @@
-class Tarsus.Views.Bootstrap.Tooltip extends Backbone.View
+class Tarsus.Views.Bootstrap.Tooltip extends Tarsus.View
   tagName: 'a'
   attributes:
     href: '#'

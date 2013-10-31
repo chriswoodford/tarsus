@@ -1,1 +1,1 @@
-class Tarsus.Views.Bootstrap.Dropdown extends Backbone.View
+class Tarsus.Views.Bootstrap.Dropdown extends Tarsus.View

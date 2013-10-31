@@ -1,1 +1,1 @@
-class Tarsus.Views.Bootstrap.Carousel extends Backbone.View
+class Tarsus.Views.Bootstrap.Carousel extends Tarsus.View

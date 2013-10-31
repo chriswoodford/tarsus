@@ -1,4 +1,4 @@
-class Tarsus.Views.Bootstrap.Modal extends Backbone.View
+class Tarsus.Views.Bootstrap.Modal extends Tarsus.View
 
   tagName: 'div'
   className: 'modal hide fade'

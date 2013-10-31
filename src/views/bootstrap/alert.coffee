@@ -1,4 +1,4 @@
-class Tarsus.Views.Bootstrap.Alert extends Backbone.View
+class Tarsus.Views.Bootstrap.Alert extends Tarsus.View
 
   tagName: 'div'
   className: 'alert'

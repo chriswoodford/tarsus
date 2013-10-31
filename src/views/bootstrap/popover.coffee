@@ -1,4 +1,4 @@
-class Tarsus.Views.Bootstrap.Popover extends Backbone.View
+class Tarsus.Views.Bootstrap.Popover extends Tarsus.View
   tagName: 'a'
   className: 'btn'
   attributes:
